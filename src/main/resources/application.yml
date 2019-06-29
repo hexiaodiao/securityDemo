@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /security
+  port: 80
+
+spring:
+  datasource:
+    url: jdbc:p6spy:mysql://192.168.1.190:3306/wanda?useSSL=false
+    username: mysql
+    password: 123456
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+  redis:
+    host: 192.168.1.190
+    port: 6379
+
+jwt:
+  header: token
+  secret: mySecret
+  expiration: 604800
+  tokenHead: "Bearer "
+
+logging:
+  level:
+    com.security.demo.dao: debug
